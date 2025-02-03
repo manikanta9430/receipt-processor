@@ -72,7 +72,12 @@ export class ReceiptService {
 
     async getPointsById(id: string){
         try {
-            return await this.cacheManager.get(id);
+            let points = await this.cacheManager.get(id);
+            if (points) {
+                return points;
+            } else {
+                throw new Error('Points not found');
+            }
         } catch (error) {
             throw error;
         }
