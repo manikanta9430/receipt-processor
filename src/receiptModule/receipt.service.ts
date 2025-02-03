@@ -62,7 +62,7 @@ export class ReceiptService {
     
             //--> Caching the result 
             let id = uuidv4(); // generating unique id
-            await this.cacheManager.set(id, totalPoints);
+            await this.cacheManager.set(id, {points: totalPoints});
             return { id };
     
         } catch (error) {
