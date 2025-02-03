@@ -1,3 +1,5 @@
+# Link to the Repository 
+**https://github.com/manikanta9430/receipt-processor**
 # Receipt Processing API
 This is a NestJS-based backend service for processing receipts and calculating points based on various rules.
 
